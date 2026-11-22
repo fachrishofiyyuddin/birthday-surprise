@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff3f6">
+  <title>A Little Surprise For You ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true"><span>♡</span><span>♡</span><span>✦</span><span>♡</span><span>✧</span></div>
+
+  <main>
+    <section id="welcome" class="screen welcome-screen">
+      <div class="welcome-card">
+        <div class="tiny-label">A LITTLE SOMETHING FOR YOU</div>
+        <div class="hero-heart">♡</div>
+        <p class="eyebrow">made with lots of love</p>
+        <h1>Hey, <span id="partnerNameHero">my favorite person</span>!</h1>
+        <p class="intro">I made a little corner of the internet just for you. Ready to see what's inside?</p>
+        <button class="primary-btn" id="startBtn">Tap for surprise <span>♡</span></button>
+        <p class="small-note">a tiny website, with a whole lot of love</p>
+      </div>
+    </section>
+
+    <section id="home" class="screen hidden">
+      <header class="topbar">
+        <div class="brand-mark">♡ <span>little things</span></div>
+        <div class="top-date" id="birthdayDate">YOUR SPECIAL DAY</div>
+      </header>
+      <section class="welcome-heading">
+        <p class="eyebrow">HAPPY BIRTHDAY, MY LOVE</p>
+        <h2>A day that's all about <em>you.</em></h2>
+        <p>Take your time, explore every little thing. I made them all for you ♡</p>
+      </section>
+
+      <section class="menu-grid" aria-label="Birthday menu">
+        <button class="menu-card journey-card" data-page="journey">
+          <span class="menu-icon">♡</span><span class="menu-title">Journey</span>
+          <span class="menu-desc">our little story</span><span class="menu-arrow">↗</span>
+        </button>
+        <button class="menu-card moment-card" data-page="moment">
+          <span class="menu-icon">✿</span><span class="menu-title">Moment</span>
+          <span class="menu-desc">memories to keep</span><span class="menu-arrow">↗</span>
+        </button>
+        <button class="menu-card playlist-card" data-page="playlist">
+          <span class="menu-icon">♫</span><span class="menu-title">Playlist</span>
+          <span class="menu-desc">songs that feel like us</span><span class="menu-arrow">↗</span>
+        </button>
+        <button class="menu-card gift-card" data-page="gift">
+          <span class="menu-icon">🎀</span><span class="menu-title">Gift</span>
+          <span class="menu-desc">one last little surprise</span><span class="menu-arrow">↗</span>
+          <span class="gift-tag">special for you</span>
+        </button>
+      </section>
+      <p class="bottom-note">no rush, sweetheart. this little world is yours ♡</p>
+    </section>
+
+    <section id="journey" class="screen page-screen hidden">
+      <button class="back-btn" data-back>← back to menu</button>
+      <div class="page-heading"><p class="eyebrow">CHAPTERS OF US</p><h2>Our <em>Journey</em></h2><p>Little by little, you became my favorite part of every day.</p></div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section id="moment" class="screen page-screen hidden">
+      <button class="back-btn" data-back>← back to menu</button>
+      <div class="page-heading"><p class="eyebrow">A COLLECTION OF US</p><h2>Sweet <em>Moments</em></h2><p>Some days pass, but these little moments stay.</p></div>
+      <div class="photo-grid" id="photoGrid"></div>
+      <p class="gallery-caption">every picture holds a little piece of my heart ♡</p>
+    </section>
+
+    <section id="playlist" class="screen page-screen hidden">
+      <button class="back-btn" data-back>← back to menu</button>
+      <div class="page-heading"><p class="eyebrow">PRESS PLAY, THINK OF US</p><h2>Our <em>Playlist</em></h2><p>A few songs that remind me of you.</p></div>
+      <div class="playlist-card-main">
+        <div class="record-art"><span>♡</span></div>
+        <div class="track-info"><p class="eyebrow">A MIXTAPE FOR YOU</p><h3 id="trackTitle">A song for my favorite person</h3><p id="trackArtist">Our little soundtrack</p></div>
+        <audio id="audioPlayer" preload="metadata"></audio>
+        <div class="audio-controls">
+          <button id="prevTrack" aria-label="Previous song">⏮</button>
+          <button id="playTrack" class="play-btn" aria-label="Play">▶</button>
+          <button id="nextTrack" aria-label="Next song">⏭</button>
+        </div>
+        <div class="track-list" id="trackList"></div>
+      </div>
+    </section>
+
+    <section id="gift" class="screen page-screen hidden">
+      <button class="back-btn" data-back>← back to menu</button>
+      <div class="page-heading"><p class="eyebrow">THE LAST LITTLE SURPRISE</p><h2>Just for <em>You</em></h2><p>There's one thing I really want you to know...</p></div>
+      <div class="gift-stage" id="giftStage">
+        <div class="gift-box" id="giftBox"><div class="gift-lid"></div><div class="gift-ribbon-v"></div><div class="gift-ribbon-h"></div><div class="gift-bow">♡</div></div>
+        <p class="gift-instruction">Tap the gift to open it ♡</p>
+      </div>
+      <article class="letter hidden" id="letter">
+        <div class="letter-stamp">♡</div>
+        <p class="eyebrow">A LETTER FOR YOU</p>
+        <h3>Happy Birthday, <span id="partnerNameLetter">love</span>!</h3>
+        <p id="letterText">Today is your day, and I hope you feel just how loved and appreciated you are. Thank you for being you, for all the little things, and for making ordinary days feel special. I hope this new chapter brings you endless happiness, good health, and beautiful things. I'll always be cheering for you. ♡</p>
+        <p class="letter-sign">with all my love,<br><em id="senderName">someone who loves you</em></p>
+      </article>
+    </section>
+  </main>
+
+  <div class="photo-modal hidden" id="photoModal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <img id="modalImage" src="" alt="Memory photo">
+    <p id="modalCaption"></p>
+  </div>
+  <footer>made with ♡, just for you</footer>
+  <script src="script.js"></script>
+</body>
+</html>
